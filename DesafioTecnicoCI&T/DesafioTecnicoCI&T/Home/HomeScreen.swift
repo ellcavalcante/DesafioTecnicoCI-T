@@ -15,16 +15,10 @@ class HomeScreen: UIView {
     
     var delegate: HomeScreenProtocol?
     
-    let popularScreen: PopularScreen = {
-        let view = PopularScreen()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1.0)
+        view.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 32/255, alpha: 1.0)
         return view
     }()
     
@@ -73,7 +67,7 @@ class HomeScreen: UIView {
         
         collection.register(UpcomingCollectionViewCell.self, forCellWithReuseIdentifier: UpcomingCollectionViewCell.identifier)
         collection.register(PopularCollectionViewCell.self, forCellWithReuseIdentifier: PopularCollectionViewCell.identifier)
-        collection.backgroundColor = .white
+        collection.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 32/255, alpha: 1.0)
         return collection
     }()
     
@@ -97,7 +91,6 @@ class HomeScreen: UIView {
         backgroundView.addSubview(titleLabel)
         addSubview(upcomingCollection)
         setUpConstraints()
-        popularScreen.isHidden = true
     }
     
     private func setUpConstraints() {

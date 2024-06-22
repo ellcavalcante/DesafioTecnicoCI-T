@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BAD32912C06B9CD006EAD7F /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD32902C06B9CD006EAD7F /* PopularViewController.swift */; };
-		0BAD32932C06B9FF006EAD7F /* PopularScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD32922C06B9FF006EAD7F /* PopularScreen.swift */; };
+		0BAD32912C06B9CD006EAD7F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD32902C06B9CD006EAD7F /* DetailsViewController.swift */; };
+		0BAD32932C06B9FF006EAD7F /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD32922C06B9FF006EAD7F /* DetailsScreen.swift */; };
 		0BD618FC2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD618FB2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift */; };
 		0BD618FF2C0EB311005548C2 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD618FE2C0EB311005548C2 /* PopularCollectionViewCell.swift */; };
 		0BED39A72C05607C00EA5F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED39A62C05607C00EA5F99 /* AppDelegate.swift */; };
@@ -40,8 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BAD32902C06B9CD006EAD7F /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
-		0BAD32922C06B9FF006EAD7F /* PopularScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularScreen.swift; sourceTree = "<group>"; };
+		0BAD32902C06B9CD006EAD7F /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		0BAD32922C06B9FF006EAD7F /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 		0BD618FB2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BD618FE2C0EB311005548C2 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		0BED39A32C05607C00EA5F99 /* DesafioTecnicoCI&T.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DesafioTecnicoCI&T.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,13 +91,13 @@
 			path = Upcoming;
 			sourceTree = "<group>";
 		};
-		0BAD328E2C06B9A9006EAD7F /* Popular */ = {
+		0BAD328E2C06B9A9006EAD7F /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				0BAD32902C06B9CD006EAD7F /* PopularViewController.swift */,
-				0BAD32922C06B9FF006EAD7F /* PopularScreen.swift */,
+				0BAD32902C06B9CD006EAD7F /* DetailsViewController.swift */,
+				0BAD32922C06B9FF006EAD7F /* DetailsScreen.swift */,
 			);
-			path = Popular;
+			path = Details;
 			sourceTree = "<group>";
 		};
 		0BED399A2C05607C00EA5F99 = {
@@ -123,7 +123,7 @@
 		0BED39A52C05607C00EA5F99 /* DesafioTecnicoCI&T */ = {
 			isa = PBXGroup;
 			children = (
-				0BAD328E2C06B9A9006EAD7F /* Popular */,
+				0BAD328E2C06B9A9006EAD7F /* Details */,
 				0BAD32892C06B7E9006EAD7F /* Upcoming */,
 				0BED39AF2C05607D00EA5F99 /* Assets.xcassets */,
 				0BED39B12C05607D00EA5F99 /* LaunchScreen.storyboard */,
@@ -301,12 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BAD32932C06B9FF006EAD7F /* PopularScreen.swift in Sources */,
+				0BAD32932C06B9FF006EAD7F /* DetailsScreen.swift in Sources */,
 				0BED39DA2C0562C000EA5F99 /* HomeScreen.swift in Sources */,
 				0BD618FC2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift in Sources */,
 				0BED39AB2C05607C00EA5F99 /* HomeViewController.swift in Sources */,
 				0BD618FF2C0EB311005548C2 /* PopularCollectionViewCell.swift in Sources */,
-				0BAD32912C06B9CD006EAD7F /* PopularViewController.swift in Sources */,
+				0BAD32912C06B9CD006EAD7F /* DetailsViewController.swift in Sources */,
 				0BED39A72C05607C00EA5F99 /* AppDelegate.swift in Sources */,
 				0BED39A92C05607C00EA5F99 /* SceneDelegate.swift in Sources */,
 			);
