@@ -26,10 +26,11 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeScreenProtocol {
     func actionSegment(_ sender: UISegmentedControl) {
-            selectedSegmentIndex = sender.selectedSegmentIndex
-            screen?.upcomingCollection.reloadData()
-            screen?.titleLabel.text = sender.selectedSegmentIndex == 0 ? "Upcoming Movies" : "Popular Movies"
-        }
+        selectedSegmentIndex = sender.selectedSegmentIndex
+        screen?.reloadUpcomingCollection()
+        let title = sender.selectedSegmentIndex == 0 ? "Upcoming Movies" : "Popular Movies"
+        screen?.updateTitleLabel(with: title)
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -38,29 +39,27 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            if selectedSegmentIndex == 0 {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.identifier, for: indexPath) as? UpcomingCollectionViewCell else {
-                    return UICollectionViewCell()
-                }
-                print("Configuring Upcoming cell at index: \(indexPath.item)")
-                return cell
-            } else {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as? PopularCollectionViewCell else {
-                    return UICollectionViewCell()
-                }
-                print("Configuring Popular cell at index: \(indexPath.item)")
-                return cell
+        if selectedSegmentIndex == 0 {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.identifier, for: indexPath) as? UpcomingCollectionViewCell else {
+                return UICollectionViewCell()
             }
+            print("Configuring Upcoming cell at index: \(indexPath.item)")
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.identifier, for: indexPath) as? PopularCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            print("Configuring Popular cell at index: \(indexPath.item)")
+            return cell
         }
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 120, height: 220)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let detailsVC: DetailsViewController = DetailsViewController()
-        
         self.navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

@@ -19,20 +19,16 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
-
 }
 
 extension DetailsViewController: DetailsScreenProtocol {
     func actionBackButton() {
         navigationController?.popToRootViewController(animated: true)
     }
-    
-    
 }

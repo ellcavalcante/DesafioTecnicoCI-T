@@ -22,7 +22,7 @@ class HomeScreen: UIView {
         return view
     }()
     
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Upcoming Movies"
@@ -57,14 +57,13 @@ class HomeScreen: UIView {
         delegate?.actionSegment(sender)
     }
     
-    lazy var upcomingCollection: UICollectionView = {
+    private lazy var upcomingCollection: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         collection.showsHorizontalScrollIndicator = false
         collection.delaysContentTouches = false
-        
         collection.register(UpcomingCollectionViewCell.self, forCellWithReuseIdentifier: UpcomingCollectionViewCell.identifier)
         collection.register(PopularCollectionViewCell.self, forCellWithReuseIdentifier: PopularCollectionViewCell.identifier)
         collection.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 32/255, alpha: 1.0)
@@ -74,6 +73,14 @@ class HomeScreen: UIView {
     func configProtocolsStandingCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
         upcomingCollection.delegate = delegate
         upcomingCollection.dataSource = dataSource
+    }
+    
+    func updateTitleLabel(with text: String) {
+        titleLabel.text = text
+    }
+    
+    func reloadUpcomingCollection() {
+        upcomingCollection.reloadData()
     }
     
     override init(frame: CGRect) {

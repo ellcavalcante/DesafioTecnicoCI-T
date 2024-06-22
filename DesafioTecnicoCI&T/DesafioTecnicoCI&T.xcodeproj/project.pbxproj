@@ -84,13 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BAD32892C06B7E9006EAD7F /* Upcoming */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Upcoming;
-			sourceTree = "<group>";
-		};
 		0BAD328E2C06B9A9006EAD7F /* Details */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +91,15 @@
 				0BAD32922C06B9FF006EAD7F /* DetailsScreen.swift */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		0BB9CD502C2707B5007F84E6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0BD618FE2C0EB311005548C2 /* PopularCollectionViewCell.swift */,
+				0BD618FB2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0BED399A2C05607C00EA5F99 = {
@@ -123,13 +125,13 @@
 		0BED39A52C05607C00EA5F99 /* DesafioTecnicoCI&T */ = {
 			isa = PBXGroup;
 			children = (
+				0BB9CD502C2707B5007F84E6 /* Cell */,
+				0BED39D82C05617400EA5F99 /* Home */,
 				0BAD328E2C06B9A9006EAD7F /* Details */,
-				0BAD32892C06B7E9006EAD7F /* Upcoming */,
+				0BED39D62C05614300EA5F99 /* App */,
 				0BED39AF2C05607D00EA5F99 /* Assets.xcassets */,
 				0BED39B12C05607D00EA5F99 /* LaunchScreen.storyboard */,
 				0BED39B42C05607D00EA5F99 /* Info.plist */,
-				0BED39D82C05617400EA5F99 /* Home */,
-				0BED39D62C05614300EA5F99 /* App */,
 			);
 			path = "DesafioTecnicoCI&T";
 			sourceTree = "<group>";
@@ -163,8 +165,6 @@
 		0BED39D82C05617400EA5F99 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				0BD618FE2C0EB311005548C2 /* PopularCollectionViewCell.swift */,
-				0BD618FB2C0E96BA005548C2 /* UpcomingCollectionViewCell.swift */,
 				0BED39AA2C05607C00EA5F99 /* HomeViewController.swift */,
 				0BED39D92C0562C000EA5F99 /* HomeScreen.swift */,
 			);

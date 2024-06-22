@@ -18,7 +18,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    lazy var contentReleaseView: UIView = {
+    private lazy var contentReleaseView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.borderColor = UIColor.white.cgColor
@@ -26,7 +26,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         return view
     }()
     
-    lazy var releaseLabel: UILabel = {
+    private lazy var releaseLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "23/05/24"
@@ -35,7 +35,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var filmNameLabel: UILabel = {
+    private lazy var filmNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Furiosa"
@@ -44,7 +44,7 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var filmImage: UIImageView = {
+    private lazy var filmImage: UIImageView = {
         let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
         img.contentMode = .scaleAspectFit
@@ -90,7 +90,6 @@ class UpcomingCollectionViewCell: UICollectionViewCell {
             
             filmNameLabel.bottomAnchor.constraint(equalTo: testView.bottomAnchor),
             filmNameLabel.leadingAnchor.constraint(equalTo: testView.leadingAnchor),
-            
             
         ])
     }
